@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-primary-container": "#556d00",
+                      "inverse-primary": "#506600",
+                      "tertiary-container": "#e5e2e1",
+                      "outline": "#8e9379",
+                      "on-secondary": "#3c2f00",
+                      "outline-variant": "#444933",
+                      "inverse-surface": "#e5e2e1",
+                      "error": "#ffb4ab",
+                      "primary-container": "#c3f400",
+                      "surface": "#131313",
+                      "on-primary": "#283500",
+                      "surface-variant": "#353535",
+                      "tertiary": "#ffffff",
+                      "secondary-fixed": "#ffe088",
+                      "on-secondary-fixed-variant": "#574500",
+                      "surface-dim": "#131313",
+                      "secondary-fixed-dim": "#e9c349",
+                      "secondary-container": "#af8d11",
+                      "on-error-container": "#ffdad6",
+                      "error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "on-tertiary-container": "#656464",
+                      "on-primary-fixed-variant": "#3c4d00",
+                      "on-tertiary": "#313030",
+                      "surface-tint": "#abd600",
+                      "surface-container-low": "#1c1b1b",
+                      "secondary": "#e9c349",
+                      "background": "#131313",
+                      "tertiary-fixed": "#e5e2e1",
+                      "on-surface": "#e5e2e1",
+                      "surface-container-highest": "#353535",
+                      "on-secondary-fixed": "#241a00",
+                      "on-error": "#690005",
+                      "on-primary-fixed": "#161e00",
+                      "surface-container": "#20201f",
+                      "on-secondary-container": "#342800",
+                      "tertiary-fixed-dim": "#c9c6c5",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "inverse-on-surface": "#313030",
+                      "primary-fixed-dim": "#abd600",
+                      "on-surface-variant": "#c4c9ac",
+                      "surface-bright": "#393939",
+                      "surface-container-high": "#2a2a2a",
+                      "primary-fixed": "#c3f400",
+                      "primary": "#ffffff",
+                      "on-background": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "overlap-offset": "-40px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "container-margin": "48px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Space Grotesk"],
+                      "body-md": ["Manrope"],
+                      "headline-md": ["Space Grotesk"],
+                      "headline-2xl": ["Space Grotesk"],
+                      "body-lg": ["Manrope"],
+                      "label-caps": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "600"}],
+                      "headline-2xl": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                      "label-caps": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDsHwAge_d3mnxqmyWhcp4Ry3MZ_oAEjYLJYeUVD_4Gvfwbmy6aN8kd7SCVMTCoFvdILf2m_0gqZ9zKNgEjhUHapZdP_aVaQwPrQN5yC8Ho0bWv2V55lBA_AERkdbSqRpZVtkdTrHo4Ft2V1LqdsRGNGu6UYuJn2MetEc0OBwv3wP-s170vqZ1lBy5b-9aGMRbc5iArDdOcwYYPNKWTmaqFkS8EHgWhVTgnkev4s3RPNt6eBYUxd-FR6aRWwQ3hpDYF5h-EaxFw2Q);
+    opacity: 0.05
+    }
+.glow-neon {
+    box-shadow: 0 0 20px rgba(195, 244, 0, 0.4)
+    }
+.skew-section {
+    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full flex justify-between items-center px-8 py-4 bg-zinc-950/90 backdrop-blur-2xl z-50 border-b border-white/10 shadow-[0_0_20px_rgba(204,255,0,0.15)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black text-lime-400 drop-shadow-[0_0_8px_rgba(204,255,0,0.8)] font-black tracking-tighter uppercase italic">Goró da Mansão</span>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-lime-400 border-b-2 border-lime-400 pb-1 font-headline-md text-sm uppercase tracking-wider" href="/index.html">Home</a>
+<a class="text-zinc-500 font-bold hover:text-white transition-colors hover:scale-110 hover:text-lime-300 transition-transform duration-200 uppercase text-sm tracking-wider" href="index.html#drops">Drops</a>
+<a class="text-zinc-500 font-bold hover:text-white transition-colors hover:scale-110 hover:text-lime-300 transition-transform duration-200 uppercase text-sm tracking-wider" href="/about.html">Mansão</a>
+<a class="text-zinc-500 font-bold hover:text-white transition-colors hover:scale-110 hover:text-lime-300 transition-transform duration-200 uppercase text-sm tracking-wider" href="/catalog.html">Shop</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<button id="cart-button" class="hover:scale-110 hover:text-lime-300 transition-transform duration-200 text-on-background relative">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="hover:scale-110 hover:text-lime-300 transition-transform duration-200 text-on-background">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-center justify-center overflow-hidden px-6 lg:px-20">
+<div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-container/10 via-transparent to-transparent"></div>
+<div class="grid lg:grid-cols-2 gap-12 items-center z-10 w-full max-w-7xl">
+<div class="order-2 lg:order-1 text-center lg:text-left">
+<span class="inline-block px-4 py-1 bg-secondary text-on-secondary font-label-caps text-xs mb-6 transform -rotate-2">NEW DROP: ORIGINAL VIBE</span>
+<h1 class="font-headline-2xl text-white mb-6">
+                        SABOR ENERGÉTICO <span class="text-primary-container drop-shadow-[0_0_15px_rgba(195,244,0,0.5)]">ORIGINAL</span>
+</h1>
+<p class="font-headline-md text-zinc-400 mb-10 max-w-lg mx-auto lg:mx-0">
+                        0% ESTIMULANTES, 100% VIBE. A elite da quebrada agora tem seu combustível oficial.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="add-to-cart bg-primary-container text-on-primary font-label-caps py-4 px-10 glow-neon hover:scale-105 transition-all active:scale-95 border-none">
+    ADQUIRIR AGORA
+</button>
+<button class="border border-secondary text-secondary font-label-caps py-4 px-10 hover:bg-secondary/10 transition-all">
+                            CONHEÇA O SABOR
+                        </button>
+</div>
+</div>
+<div class="order-1 lg:order-2 flex justify-center relative">
+<div class="absolute inset-0 bg-primary-container/20 blur-[120px] rounded-full"></div>
+<img alt="Product Mockup" class="relative z-10 w-full max-w-md drop-shadow-[0_0_40px_rgba(195,244,0,0.4)] transform hover:rotate-2 transition-transform duration-500" data-alt="3D product mockup of a sleek glass bottle with neon green liquid and metallic gold label on a dark textured background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_JJsYigz7abbkVXKOUqM1zO5T7YgVg7kwr3pbuvJaphAAwI3-kJ0ysbpmFMKIojZdDgC1UdmUy0HZM3rrCQMJmfw029hsQIRUH-bQqJ7VgEEoMB_6wAvjnUUGVIkYCWqxNsRUJjRfWH8RJtGhBLjsBsAyW-hL4fXpxObPfhnlpfWUYZgkPX2fLOLuNLTHU7pViOMTHHSF7woY0AnkSG0K_N8zwqHfiKMl3LazyK0fHKb70iTQqoa0nhjhyeJ1_S19TV18vs64yw"/>
+</div>
+</div>
+<!-- Rotating Marquee -->
+<div class="absolute bottom-10 left-0 w-full overflow-hidden py-4 border-y border-white/5 whitespace-nowrap">
+<div class="inline-block animate-marquee">
+<span class="font-label-caps text-4xl text-zinc-800 mx-4">MANSÃO MAROMBA</span>
+<span class="font-label-caps text-4xl text-primary-container mx-4">★</span>
+<span class="font-label-caps text-4xl text-zinc-800 mx-4">HARDCORE LUXURY</span>
+<span class="font-label-caps text-4xl text-primary-container mx-4">★</span>
+<span class="font-label-caps text-4xl text-zinc-800 mx-4">GORÓ DA MANSÃO</span>
+<span class="font-label-caps text-4xl text-primary-container mx-4">★</span>
+<span class="font-label-caps text-4xl text-zinc-800 mx-4">ESTILO DE QUEBRADA</span>
+<span class="font-label-caps text-4xl text-primary-container mx-4">★</span>
+</div>
+<style>
+                    @keyframes marquee {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-50%); }
+                    }
+                    .animate-marquee {
+                        display: inline-block;
+                        animation: marquee 20s linear infinite;
+                    }
+                </style>
+</div>
+</section>
+<!-- Social Proof / Fellas Section -->
+<section class="py-24 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute inset-0 grain-texture"></div>
+<div class="container mx-auto px-6 relative z-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-xl text-white mb-4">DRINKS DA MANSÃO</h2>
+<p class="font-body-lg text-zinc-500 max-w-2xl mx-auto italic">A mistura perfeita entre a força bruta e o luxo refinado. O combustível que separa os amadores da elite.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Photo Card 1 -->
+<div class="group relative aspect-[4/5] bg-surface-container-highest overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+<img alt="Foco Total" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-700" src="goro_foco.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6">
+<span class="bg-primary-container text-on-primary px-3 py-1 font-label-caps text-[10px] mb-2 inline-block">INTENSIDADE</span>
+<p class="font-headline-md text-white">FOCO TOTAL</p>
+</div>
+</div>
+<!-- Photo Card 2 -->
+<div class="group relative aspect-[4/5] bg-surface-container-highest overflow-hidden translate-y-8 transform hover:-translate-y-2 transition-all duration-300">
+<img alt="Vibe Única" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-700" src="goro_vibe.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6">
+<span class="bg-secondary text-on-secondary px-3 py-1 font-label-caps text-[10px] mb-2 inline-block">COMUNIDADE</span>
+<p class="font-headline-md text-white">VIBE ÚNICA</p>
+</div>
+</div>
+<!-- Photo Card 3 -->
+<div class="group relative aspect-[4/5] bg-surface-container-highest overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+<img alt="Lifestyle Elite" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-all duration-700" src="goro_elite.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-6 left-6">
+<span class="bg-primary-container text-on-primary px-3 py-1 font-label-caps text-[10px] mb-2 inline-block">CONQUISTA</span>
+<p class="font-headline-md text-white">LIFESTYLE ELITE</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Lifestyle Bento Grid -->
+<section class="py-24 px-6 lg:px-20 bg-background">
+<div class="container mx-auto">
+<div class="flex flex-col lg:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-xl text-white">O MUNDO <span class="text-secondary italic">DA MANSÃO</span></h2>
+<p class="text-zinc-500 font-body-lg">Não é apenas uma bebida. É um ticket de entrada para o ecossistema mais hardcore do Brasil.</p>
+</div>
+<a class="text-primary-container font-label-caps flex items-center gap-2 hover:translate-x-2 transition-transform" href="#">
+                        EXPLORE O UNIVERSO <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container overflow-hidden relative border border-white/5 group">
+<img alt="A Sede do Poder" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" src="goro_bar.png"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-md text-white mb-2">A ADEGA DO PODER</h3>
+<p class="text-zinc-400 text-sm">Onde os maiores criadores e atletas se reúnem para celebrar a vitória.</p>
+</div>
+</div>
+<div class="md:col-span-2 md:row-span-1 bg-surface-container overflow-hidden relative border border-white/5 group">
+<img alt="Lifestyle 2" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700" data-alt="Close up of high-end gym equipment with gold and black metallic finish in a dark room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAEN5M-DhMI-CLUwbiixCpQ-nX4aEKUtcENBZmGRGtpjQE6NumxdzKIZQrm8f-BXqqtKnl3ang5WnOgcXP-y_kFQhbWyykBS875vBSfBmQgm8cMaWZEHRHxFd3HHTU_lPfeRbfkAc0bNm_z1e7qyqezR9YVvZpxmvFw7AgBicO0mrAvHf1R5uYEP2DKLZG2k0qgoJVW7XzuqgjbXfvBsS7goAzXt8Pd-OTfkYXvg4cGTZOj2dyIjgoFXGAdQRfU6tw81jPXYGM7Q"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+<h3 class="font-headline-md text-white mb-1">EQUIPAMENTO ELITE</h3>
+<p class="text-zinc-400 text-sm">Performance sem desculpas.</p>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 bg-primary-container/10 overflow-hidden relative border border-primary-container/20 group">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-6xl opacity-20" data-icon="bolt">bolt</span>
+</div>
+<div class="absolute inset-0 p-6 flex flex-col justify-center text-center">
+<h3 class="font-label-caps text-primary-container text-2xl mb-1">ZERO STIM</h3>
+<p class="text-zinc-400 text-[10px] uppercase tracking-widest">Foco Natural e Puro</p>
+</div>
+</div>
+<div class="md:col-span-1 md:row-span-1 bg-surface-container-highest overflow-hidden relative border border-white/5 group">
+<img alt="Relax Luxury" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700" src="goro_relax.png"/>
+<div class="absolute inset-0 p-6 flex flex-col justify-end">
+<p class="font-headline-md text-white text-lg">RELAX LUXURY</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 relative overflow-hidden skew-section bg-primary-container mb-24">
+<div class="container mx-auto px-6 text-center">
+<h2 class="font-headline-2xl text-on-primary mb-8 tracking-tighter">PRONTO PARA O PRÓXIMO NÍVEL?</h2>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-black text-white font-label-caps py-6 px-16 hover:bg-zinc-800 transition-all text-xl shadow-2xl">
+                        GARANTIR MEU GORÓ
+                    </button>
+<div class="text-on-primary font-body-lg flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="verified" data-weight="fill">verified</span>
+                        ENTREGA EXPRESSA EM TODA QUEBRADA
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col items-center gap-6 px-10 bg-black py-12 border-t border-zinc-800">
+<div class="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-8">
+<span class="text-lime-400 font-black text-xl uppercase italic font-black">GORÓ DA MANSÃO</span>
+<div class="flex gap-8">
+<a class="text-zinc-600 hover:text-lime-400 transition-colors font-mono text-[10px] uppercase tracking-[0.2em]" href="/about.html">Termos</a>
+<a class="text-zinc-600 hover:text-lime-400 transition-colors font-mono text-[10px] uppercase tracking-[0.2em]" href="/about.html">Privacidade</a>
+<a class="text-zinc-600 hover:text-lime-400 transition-colors font-mono text-[10px] uppercase tracking-[0.2em]" href="/about.html">Contato</a>
+</div>
+<div class="flex gap-4">
+<button class="text-zinc-500 hover:text-lime-400 transition-colors">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button class="text-zinc-500 hover:text-lime-400 transition-colors">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</button>
+</div>
+</div>
+<div class="text-zinc-600 font-mono text-[10px] uppercase tracking-[0.2em] mt-8">
+            © 2024 GORÓ DA MANSÃO - LIFESTYLE DE QUEBRADA
+        </div>
+</footer>
+    <script src="app.js"></script>
+</body></html>
