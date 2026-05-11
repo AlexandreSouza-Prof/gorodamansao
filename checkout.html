@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "surface-container": "#20201f",
+                    "inverse-on-surface": "#313030",
+                    "surface-tint": "#abd600",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary": "#283500",
+                    "primary-fixed": "#c3f400",
+                    "on-error": "#690005",
+                    "background": "#131313",
+                    "on-background": "#e5e2e1",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-primary": "#506600",
+                    "error-container": "#93000a",
+                    "tertiary": "#ffffff",
+                    "primary-fixed-dim": "#abd600",
+                    "on-surface": "#e5e2e1",
+                    "primary": "#ffffff",
+                    "on-surface-variant": "#c4c9ac",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#af8d11",
+                    "on-primary-fixed": "#161e00",
+                    "outline-variant": "#444933",
+                    "primary-container": "#c3f400",
+                    "on-primary-container": "#556d00",
+                    "secondary-fixed-dim": "#e9c349",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary-container": "#342800",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#656464",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-bright": "#393939",
+                    "surface-variant": "#353535",
+                    "on-tertiary": "#313030",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface": "#131313",
+                    "secondary": "#e9c349",
+                    "tertiary-container": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#574500",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#3c2f00",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "surface-container-highest": "#353535",
+                    "outline": "#8e9379"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-margin": "48px",
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-2xl": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-xl": ["Space Grotesk"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-2xl": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "label-caps": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface-dim text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center px-6 h-20 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-black text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.8)] font-headline-md tracking-tighter uppercase italic">
+                GORÓ DA MANSÃO
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<span class="font-label-caps text-zinc-500 hover:text-lime-300 transition-all cursor-pointer">SEGURANÇA TOTAL</span>
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen pt-32 pb-20 px-4 md:px-10 max-w-7xl mx-auto relative">
+<div class="absolute inset-0 overflow-hidden -z-10">
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-container/10 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/5 blur-[100px] rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Side: Order Summary -->
+<section class="lg:col-span-5 space-y-8 order-2 lg:order-1">
+<div class="relative bg-surface-container-low border border-white/5 p-8 overflow-hidden">
+<div class="grain-overlay absolute inset-0"></div>
+<h2 class="font-headline-xl text-primary mb-8 border-l-4 border-primary-container pl-4">SEU PACK</h2>
+<div class="space-y-6">
+<!-- Product Item -->
+<div class="flex gap-4 group">
+<div class="w-24 h-24 bg-surface-container-high border border-white/10 flex-shrink-0 relative overflow-hidden">
+<img alt="energy drink can" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Premium sleek black energy drink can with neon green details on a dark reflective surface with smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8G54J2r44pQ7Lf8SYoDpvBUc5sihZUMCNzjlJBRW2gd3-LKjs-I-BhMLFhqhhH6pWQQJ2_2so_vDMaD_kqRJkWkr4wdv_omjNIJ_HykfUBYArG5Jr5AFdnF1McGS9RZcYTn6GR-X59WY4sU84mMnoaeN9eyczx0MeAd_hAzYUbmVOZx3zPwNiADWb0PFrsK6Yp6cuENoE_Z7rtksD_PKu0LeS60dtxW6gjGDu3mrgfge6n-JJevaj6S1SGYkex6kFsE_3Io_shA"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div>
+<h3 class="font-headline-md text-primary leading-none mb-1">ENERGY GORÓ MAX</h3>
+<p class="font-label-caps text-zinc-500">PACK C/ 12 LATAS</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="font-body-md text-zinc-400">Qtd: 02</span>
+<span class="font-headline-md text-primary-container">R$ 189,90</span>
+</div>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="flex gap-4 group">
+<div class="w-24 h-24 bg-surface-container-high border border-white/10 flex-shrink-0 relative overflow-hidden">
+<img alt="protein shaker" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Professional black plastic protein shaker bottle with gold lid against a dark moody gym background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClqBqM-Hk8ObrIOqoYzIy-0Gvw36NJf711-lGvglbcHJeisHi51S6LPjThLlxR_c2SmpOi6znBtefVt7I6Lck_ISTNqmZ2jJJu4IC9cgexlAA5xwcGaCvDk5VSIFxfWd4XSeeB9m3ZItRHgLqf6gdmH9ye-L9p5-INJgcD_s8BRplFje8UGN8yjHaYTfeHUOPAkhsxyUUvBKJsTgQ7IWQxgadqRdutttnEcE2Qq-ua8_O1lgpmalaeKqJCLpXfbKzBeWWQ6h-NFQ"/>
+</div>
+<div class="flex-grow flex flex-col justify-between py-1">
+<div>
+<h3 class="font-headline-md text-primary leading-none mb-1">SHAKER DA MANSÃO</h3>
+<p class="font-label-caps text-zinc-500">LIMITED GOLD EDITION</p>
+</div>
+<div class="flex justify-between items-end">
+<span class="font-body-md text-zinc-400">Qtd: 01</span>
+<span class="font-headline-md text-primary-container">R$ 59,00</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10 pt-8 border-t border-white/10 space-y-4">
+<div class="flex justify-between font-body-md text-zinc-400">
+<span>SUBTOTAL</span>
+<span>R$ 248,90</span>
+</div>
+<div class="flex justify-between font-body-md text-zinc-400">
+<span>FRETE (SEDEX MAROMBA)</span>
+<span class="text-secondary">GRÁTIS</span>
+</div>
+<div class="flex justify-between items-center pt-4">
+<span class="font-headline-md text-primary">TOTAL</span>
+<div class="text-right">
+<span class="block font-headline-xl text-primary-container drop-shadow-[0_0_10px_rgba(163,230,53,0.4)]">R$ 248,90</span>
+<span class="font-label-caps text-zinc-500">OU 12X DE R$ 20,74</span>
+</div>
+</div>
+</div>
+<div class="mt-8 p-4 bg-white/5 border border-secondary/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">lock</span>
+<p class="font-label-caps text-zinc-400 text-[10px]">AMBIENTE 100% CRIPTOGRAFADO E PROTEGIDO POR PROTOCOLOS DE ALTA PERFORMANCE</p>
+</div>
+</div>
+</section>
+<!-- Right Side: Fast Checkout Form -->
+<section class="lg:col-span-7 order-1 lg:order-2">
+<div class="space-y-12">
+<!-- Step 1: Personal Data -->
+<div class="relative">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 flex items-center justify-center bg-primary-container text-on-primary font-headline-md italic">01</span>
+<h2 class="font-headline-xl text-primary uppercase italic">IDENTIFICAÇÃO</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">NOME COMPLETO</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="Ex: Leo Stronda" type="text"/>
+</div>
+<div class="relative group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">E-MAIL</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="leo@mansaomaromba.com" type="email"/>
+</div>
+</div>
+</div>
+<!-- Step 2: Shipping -->
+<div class="relative">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 flex items-center justify-center bg-zinc-800 text-zinc-400 font-headline-md italic">02</span>
+<h2 class="font-headline-xl text-primary uppercase italic">LOGÍSTICA</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-4 group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">CEP</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="00000-000" type="text"/>
+</div>
+<div class="md:col-span-8 group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">ENDEREÇO</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="Rua da Hipertrofia, 123" type="text"/>
+</div>
+<div class="md:col-span-6 group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">CIDADE</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="São Paulo" type="text"/>
+</div>
+<div class="md:col-span-6 group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">MODALIDADE</label>
+<select class="w-full bg-surface-container-high border-none text-primary py-3 px-4 outline-none appearance-none cursor-pointer">
+<option>SEDEX MAROMBA (2 DIAS) - GRÁTIS</option>
+<option>PAC SHAPE (5 DIAS) - GRÁTIS</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Step 3: Payment -->
+<div class="relative">
+<div class="flex items-center gap-4 mb-8">
+<span class="w-10 h-10 flex items-center justify-center bg-zinc-800 text-zinc-400 font-headline-md italic">03</span>
+<h2 class="font-headline-xl text-primary uppercase italic">PAGAMENTO</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+<div class="border border-primary-container bg-primary-container/5 p-4 flex flex-col items-center gap-2 cursor-pointer">
+<span class="material-symbols-outlined text-primary-container">credit_card</span>
+<span class="font-label-caps text-primary text-[10px]">CARTÃO CRÉDITO</span>
+</div>
+<div class="border border-white/10 hover:border-white/30 p-4 flex flex-col items-center gap-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-zinc-500">qr_code_2</span>
+<span class="font-label-caps text-zinc-500 text-[10px]">PIX (5% OFF)</span>
+</div>
+<div class="border border-white/10 hover:border-white/30 p-4 flex flex-col items-center gap-2 cursor-pointer transition-all">
+<span class="material-symbols-outlined text-zinc-500">barcode</span>
+<span class="font-label-caps text-zinc-500 text-[10px]">BOLETO</span>
+</div>
+</div>
+<div class="space-y-6">
+<div class="group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">NÚMERO DO CARTÃO</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">VENCIMENTO</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="MM/AA" type="text"/>
+</div>
+<div class="group">
+<label class="block font-label-caps text-zinc-500 mb-2 group-focus-within:text-primary-container transition-colors">CVV</label>
+<input class="w-full bg-transparent border-b border-white/20 focus:border-primary-container focus:ring-0 text-primary py-2 outline-none transition-all" placeholder="123" type="text"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Submit Button -->
+<div class="pt-6">
+<button class="w-full bg-primary-container py-6 relative overflow-hidden group transition-all active:scale-[0.98]">
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+<span class="relative z-10 font-headline-xl text-on-primary italic tracking-tight flex items-center justify-center gap-4">
+                                FINALIZAR COMPRA - MARCHA!
+                                <span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</span>
+</button>
+<p class="mt-4 text-center font-label-caps text-zinc-500 text-[11px] flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-secondary scale-75" style="font-variation-settings: 'FILL' 1;">verified</span>
+                            COMPRA SEGURA E CERTIFICADA PELA MANSÃO MAROMBA®
+                        </p>
+</div>
+</div>
+</section>
+</div>
+<!-- Stickers / Badges -->
+<div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="rotate-[-2deg] bg-white text-black p-2 font-black text-center font-label-caps text-xs">ENTREGA ULTRA-RÁPIDA</div>
+<div class="rotate-[3deg] bg-primary-container text-black p-2 font-black text-center font-label-caps text-xs shadow-[0_0_15px_rgba(163,230,53,0.5)]">QUALIDADE MÁXIMA</div>
+<div class="rotate-[-1deg] border border-white text-white p-2 font-black text-center font-label-caps text-xs">EMBALAGEM DISCRETA</div>
+<div class="rotate-[2deg] bg-secondary text-black p-2 font-black text-center font-label-caps text-xs">SUPORTE 24/7</div>
+</div>
+</main>
+<footer class="bg-surface-container-low border-t border-white/10 py-10 px-6">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-headline-md italic text-zinc-600">© 2024 GORÓ DA MANSÃO</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-zinc-600 hover:text-primary transition-colors cursor-pointer">payments</span>
+<span class="material-symbols-outlined text-zinc-600 hover:text-primary transition-colors cursor-pointer">credit_card</span>
+<span class="material-symbols-outlined text-zinc-600 hover:text-primary transition-colors cursor-pointer">account_balance_wallet</span>
+</div>
+<div class="font-label-caps text-zinc-600 text-[10px]">TERMOS DE SERVIÇO • PRIVACIDADE • POLÍTICA DE REEMBOLSO</div>
+</div>
+</footer>
+<!-- Mobile Navigation Shell -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-[#1A1A1A]/95 backdrop-blur-2xl flex justify-around items-center border-t border-yellow-500/20 z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
+<div class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2">
+<span class="material-symbols-outlined">bolt</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Drops</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Mansão</span>
+</div>
+<div class="flex flex-col items-center justify-center text-lime-400 bg-white/5 rounded-none border-b-2 border-lime-400 px-6 py-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Bag</span>
+</div>
+</nav>
+</body></html>

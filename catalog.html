@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#131313",
+                    "surface-container": "#20201f",
+                    "inverse-on-surface": "#313030",
+                    "surface-tint": "#abd600",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary": "#283500",
+                    "primary-fixed": "#c3f400",
+                    "on-error": "#690005",
+                    "background": "#131313",
+                    "on-background": "#e5e2e1",
+                    "on-primary-fixed-variant": "#3c4d00",
+                    "surface-container-high": "#2a2a2a",
+                    "inverse-primary": "#506600",
+                    "error-container": "#93000a",
+                    "tertiary": "#ffffff",
+                    "primary-fixed-dim": "#abd600",
+                    "on-surface": "#e5e2e1",
+                    "primary": "#ffffff",
+                    "on-surface-variant": "#c4c9ac",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#af8d11",
+                    "on-primary-fixed": "#161e00",
+                    "outline-variant": "#444933",
+                    "primary-container": "#c3f400",
+                    "on-primary-container": "#556d00",
+                    "secondary-fixed-dim": "#e9c349",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary-container": "#342800",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-tertiary-container": "#656464",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-bright": "#393939",
+                    "surface-variant": "#353535",
+                    "on-tertiary": "#313030",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed": "#1c1b1b",
+                    "surface": "#131313",
+                    "secondary": "#e9c349",
+                    "tertiary-container": "#e5e2e1",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#574500",
+                    "secondary-fixed": "#ffe088",
+                    "on-secondary": "#3c2f00",
+                    "tertiary-fixed-dim": "#c9c6c5",
+                    "on-tertiary-fixed-variant": "#474646",
+                    "surface-container-highest": "#353535",
+                    "outline": "#8e9379"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-margin": "48px",
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-2xl": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-xl": ["Space Grotesk"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-2xl": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "label-caps": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface-dim text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center px-6 h-20 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-black text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.8)] font-black tracking-tighter uppercase italic">
+                GORÓ DA MANSÃO
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-zinc-500 font-label-caps text-label-caps hover:text-lime-300 hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)] transition-all" href="/index.html">HOME</a>
+<a class="text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.6)] font-label-caps text-label-caps transition-all" href="/catalog.html">SHOP</a>
+<a class="text-zinc-500 font-label-caps text-label-caps hover:text-lime-300 hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)] transition-all" href="index.html#drops">DROPS</a>
+<a class="text-zinc-500 font-label-caps text-label-caps hover:text-lime-300 hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)] transition-all" href="/about.html">MANSÃO</a>
+</nav>
+<div class="flex items-center gap-4 text-zinc-500">
+<button id="cart-button" class="hover:text-lime-300 transition-all scale-95 duration-150 ease-out relative">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="hover:text-lime-300 transition-all scale-95 duration-150 ease-out">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Editorial Header -->
+<div class="relative mb-20">
+<div class="absolute -left-12 -top-12 w-64 h-64 bg-primary-fixed/10 rounded-full blur-[100px]"></div>
+<h1 class="font-headline-2xl text-headline-2xl text-white relative z-10 mb-4 uppercase">
+                HARDCORE <br/> <span class="text-primary-fixed drop-shadow-[0_0_15px_rgba(195,244,0,0.4)]">ESTOQUE</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                O combustível da elite. Performance urbana elevada ao nível de luxo. Sem misturas, apenas o puro suco da Mansão.
+            </p>
+</div>
+<!-- Product Grid -->
+<!-- Dinamic Product Grid -->
+<div id="product-list" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Os produtos serão carregados aqui via app.js -->
+</div>
+<!-- Marquee Section -->
+<div class="mt-32 overflow-hidden border-y border-white/10 py-8 whitespace-nowrap">
+<div class="flex animate-marquee">
+<span class="font-headline-2xl text-headline-2xl text-white/5 uppercase mx-8">NO EXCUSES • NO LIMITS • ONLY POWER • NO EXCUSES • NO LIMITS • ONLY POWER • NO EXCUSES • NO LIMITS • ONLY POWER</span>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<footer class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-[#1A1A1A]/95 backdrop-blur-2xl border-t border-yellow-500/30 flex justify-around items-center pb-safe z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
+<a href="/index.html" class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">home</span>
+<span class="font-bold uppercase tracking-widest text-[10px]">Home</span>
+</a>
+<a href="/catalog.html" class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-bold uppercase tracking-widest text-[10px]">Drops</span>
+</a>
+<a href="/about.html" class="flex flex-col items-center justify-center text-lime-400 bg-white/5 border-b-2 border-lime-400 px-6 py-2 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-bold uppercase tracking-widest text-[10px]">Mansão</span>
+</a>
+<a href="/catalog.html" class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="font-bold uppercase tracking-widest text-[10px]">Bag</span>
+</a>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script src="app.js"></script>
+</body></html>

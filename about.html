@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#131313",
+                        "surface-container": "#20201f",
+                        "inverse-on-surface": "#313030",
+                        "surface-tint": "#abd600",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#283500",
+                        "primary-fixed": "#c3f400",
+                        "on-error": "#690005",
+                        "background": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-container-high": "#2a2a2a",
+                        "inverse-primary": "#506600",
+                        "error-container": "#93000a",
+                        "tertiary": "#ffffff",
+                        "primary-fixed-dim": "#abd600",
+                        "on-surface": "#e5e2e1",
+                        "primary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "error": "#ffb4ab",
+                        "secondary-container": "#af8d11",
+                        "on-primary-fixed": "#161e00",
+                        "outline-variant": "#444933",
+                        "primary-container": "#c3f400",
+                        "on-primary-container": "#556d00",
+                        "secondary-fixed-dim": "#e9c349",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary-container": "#342800",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#656464",
+                        "on-secondary-fixed": "#241a00",
+                        "surface-bright": "#393939",
+                        "surface-variant": "#353535",
+                        "on-tertiary": "#313030",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface": "#131313",
+                        "secondary": "#e9c349",
+                        "tertiary-container": "#e5e2e1",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#574500",
+                        "secondary-fixed": "#ffe088",
+                        "on-secondary": "#3c2f00",
+                        "tertiary-fixed-dim": "#c9c6c5",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "surface-container-highest": "#353535",
+                        "outline": "#8e9379"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline-2xl": ["Space Grotesk"],
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "headline-xl": ["Space Grotesk"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-2xl": ["84px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "120%", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.grain-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCnp-EQRBLims00iuO-ucYdl_pYnYyFPW_TyXFzvP5J2qDhWCLgzpHJPtzxN2aKlkXOLUYSe-tK-B2lEFGnlOT0yQ1sa-ncPUZ1yX8RPJgRb7GDzT_NDcS_5llq532TeIzoVTt-qdxFBReJwxoq1T77zTqtgcNXgsr0ibHlsF42Qvxk5PjO0Y2OSxa0E0BRkoRfr-GNIQ6m_3uxKhfbNZIe5a9YjZ5COSJXrP6Wa3jviWcsqhAguKsL8uC71B3daS-7oNA5k6aaKw);
+    opacity: 0.05
+    }
+.glow-neon {
+    box-shadow: 0 0 20px rgba(171, 214, 0, 0.4)
+    }
+.diagonal-divider {
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-surface-tint selection:text-on-primary min-h-screen pb-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<nav class="flex justify-between items-center px-6 h-20 w-full max-w-[1920px] mx-auto">
+<div class="text-2xl font-black text-lime-400 drop-shadow-[0_0_10px_rgba(163,230,53,0.8)] font-black tracking-tighter uppercase italic">
+                GORÓ DA MANSÃO
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-zinc-500 font-label-caps text-label-caps hover:text-lime-300 hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)] transition-all" href="/index.html">HOME</a>
+<a class="text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.6)] font-label-caps text-label-caps" href="/about.html">POR QUE GORÓ?</a>
+<a class="text-zinc-500 font-label-caps text-label-caps hover:text-lime-300 hover:drop-shadow-[0_0_12px_rgba(163,230,53,0.9)] transition-all" href="/catalog.html">SHOP</a>
+<div class="flex items-center gap-4 ml-4">
+<button id="cart-button" class="relative">
+<span class="material-symbols-outlined text-zinc-500 hover:text-lime-400 cursor-pointer transition-all">shopping_cart</span>
+</button>
+<span class="material-symbols-outlined text-zinc-500 hover:text-lime-400 cursor-pointer transition-all">person</span>
+</div>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-lime-400 text-3xl">menu</span>
+</div>
+</nav>
+</header>
+<main class="pt-24 px-4 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="relative py-12 mb-20 overflow-hidden">
+<div class="absolute -top-20 -right-20 w-96 h-96 bg-surface-tint/20 rounded-full blur-[120px]"></div>
+<div class="relative z-10 flex flex-col items-start gap-4">
+<div class="bg-surface-tint text-on-primary font-label-caps text-[12px] px-3 py-1 rotate-[-2deg] inline-block mb-4">
+                    SCIENCE OF PERFORMANCE
+                </div>
+<h1 class="font-headline-2xl text-headline-2xl text-white uppercase italic">
+                    POR QUE O <span class="text-surface-tint">GORÓ?</span>
+</h1>
+<p class="font-body-lg text-body-lg max-w-2xl text-on-surface-variant">
+                    Nascido na Mansão Maromba, o Goró é a resposta definitiva para quem busca performance sem comprometer a saúde cardiovascular. A evolução do "Lifestyle de Quebrada".
+                </p>
+</div>
+</section>
+<!-- Comparison Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-24 items-stretch">
+<!-- Side: The Risk (Red/Common) -->
+<div class="relative group p-8 bg-surface-container-low border border-error/20 flex flex-col gap-6">
+<div class="grain-texture absolute inset-0 pointer-events-none"></div>
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-error flex items-center gap-2 uppercase">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+                        COMUM + ÁLCOOL
+                    </h2>
+<span class="text-[10px] font-bold text-error tracking-widest uppercase px-2 py-1 border border-error/30">RISCO CARDÍACO</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 bg-error/5 border-l-4 border-error">
+<span class="material-symbols-outlined text-error mt-1">heart_broken</span>
+<div>
+<p class="font-headline-md text-[18px] text-white">Taquicardia Severa</p>
+<p class="font-body-md text-on-surface-variant">A mistura de Taurina, Cafeína sintética e Álcool sobrecarrega o miocárdio.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-error/5 border-l-4 border-error">
+<span class="material-symbols-outlined text-error mt-1">trending_down</span>
+<div>
+<p class="font-headline-md text-[18px] text-white">O Crash Energético</p>
+<p class="font-body-md text-on-surface-variant">Picos insustentáveis de açúcar seguidos por letargia profunda e ressaca metabólica.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-error/5 border-l-4 border-error">
+<span class="material-symbols-outlined text-error mt-1">medical_services</span>
+<div>
+<p class="font-headline-md text-[18px] text-white">Engana o Cérebro</p>
+<p class="font-body-md text-on-surface-variant">A taurina mascara os efeitos sedativos do álcool, levando ao consumo excessivo perigoso.</p>
+</div>
+</div>
+</div>
+<div class="mt-auto h-48 bg-zinc-900 overflow-hidden relative border border-white/5">
+<img class="w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-500" data-alt="abstract visual of red chaotic lightning representing cardiac stress and energy crash against dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB3jOm2hl3jE2TIKypUGBIYMKikaWjQ5puEOJjx0sjlUOVnztnTqGCKdaR_-thTCcHGDI6XwFAItMfKngo1Xj-CdMsEF3pWoIkkBh5K2aDEf_BZk3EWt5P_AWULpX8zRXgxBLb1670vKfrPVvvslYrenTM3PHtmTOjPd4GGXfUG1s6GG7CeocQqIWstsePd1EvIO_3nu1JtYEU9LH6RVJAaY6R8uaWvkXzgVPiJGkqouk2ItmM-bVe_-ynQkYnz6KJBZr7ICgFvA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+</div>
+</div>
+<!-- Side: The Solution (Green/Goró) -->
+<div class="relative group p-8 bg-surface-container-high border-2 border-secondary shadow-[0_0_30px_rgba(233,195,73,0.1)] flex flex-col gap-6">
+<div class="grain-texture absolute inset-0 pointer-events-none"></div>
+<div class="absolute -top-4 -right-4 bg-secondary text-on-secondary px-4 py-1 font-label-caps text-[12px] shadow-lg z-20 rotate-3">
+                    LIFESTYLE DE LUXO
+                </div>
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-headline-md text-surface-tint flex items-center gap-2 uppercase">
+<span class="material-symbols-outlined text-surface-tint" style="font-variation-settings: 'FILL' 1;">verified</span>
+                        GORÓ DA MANSÃO
+                    </h2>
+<span class="text-[10px] font-bold text-surface-tint tracking-widest uppercase px-2 py-1 border border-surface-tint/30">DANOS REDUZIDOS</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-start gap-4 p-4 bg-surface-tint/10 border-l-4 border-surface-tint glow-neon">
+<span class="material-symbols-outlined text-surface-tint mt-1">bolt</span>
+<div>
+<p class="font-headline-md text-[18px] text-white">0% Taurina / 0% Cafeína</p>
+<p class="font-body-md text-on-surface-variant">Foco total no sabor original e na redução de danos cardiovasculares.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-tint/10 border-l-4 border-surface-tint">
+<span class="material-symbols-outlined text-surface-tint mt-1">liquor</span>
+<div>
+<p class="font-headline-md text-[18px] text-white">Mixologia Premium</p>
+<p class="font-body-md text-on-surface-variant">Destilados de alta pureza e extratos naturais que respeitam seu paladar e corpo.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 bg-surface-tint/10 border-l-4 border-surface-tint">
+<span class="material-symbols-outlined text-surface-tint mt-1">emoji_events</span>
+<div>
+<p class="font-headline-md text-[18px] text-white">Foco na Performance</p>
+<p class="font-body-md text-on-surface-variant">Feito para quem treina pesado e curte com inteligência. Sem rebote.</p>
+</div>
+</div>
+</div>
+<div class="mt-auto h-48 bg-zinc-900 overflow-hidden relative border border-secondary/30">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="luxury cocktail glass with neon lime highlights and professional ice cubes in a studio dark setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlev_TXozyZWqW3lm02-EbqQCQd4ghZ0PJb-blg1DSOYDxUOeG5QRubzfSe9tMGJUX1hDZ9Xbwv6Yap8yx5Ub2IsvOlfAffIRrkDUn-Y0EpngLjItBqNxN0KkXRCmKdATUUy52yYE-giwhRObp-Xg0YWa4DNtE4yXHhXplLnYcgCvHCcibjN1-1eHp0FBslzMhYNA7fIkLIAcqD1qyg9i23kFXbW8z_xL53YgJFn8bdPyBXb1gSC7SxiGeEYvKUqw9S7cKkFjUWw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest to-transparent"></div>
+</div>
+</div>
+</div>
+<!-- Marquee Section -->
+<div class="w-full overflow-hidden py-12 bg-surface-container-lowest border-y border-white/5 mb-24">
+<div class="flex whitespace-nowrap gap-20 animate-marquee items-center">
+<span class="font-headline-xl text-headline-xl text-zinc-800 uppercase italic">REDUÇÃO DE DANOS</span>
+<span class="material-symbols-outlined text-surface-tint text-4xl">bolt</span>
+<span class="font-headline-xl text-headline-xl text-zinc-800 uppercase italic">MARCHA NO PROGRESSO</span>
+<span class="material-symbols-outlined text-surface-tint text-4xl">fitness_center</span>
+<span class="font-headline-xl text-headline-xl text-zinc-800 uppercase italic">ESTILO DE VIDA</span>
+<span class="material-symbols-outlined text-surface-tint text-4xl">bolt</span>
+<span class="font-headline-xl text-headline-xl text-zinc-800 uppercase italic">REDUÇÃO DE DANOS</span>
+</div>
+<style>
+                @keyframes marquee {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                }
+                .animate-marquee {
+                    animation: marquee 30s linear infinite;
+                }
+            </style>
+</div>
+<!-- Call to Action -->
+<section class="mb-32 text-center relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-surface-tint/5 blur-[100px] -z-10"></div>
+<h2 class="font-headline-xl text-headline-xl text-white mb-6 uppercase">BEBA COM <span class="text-secondary italic">INTELIGÊNCIA.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">
+                O progresso não para, nem mesmo nos momentos de lazer. Escolha o combustível que respeita sua trajetória.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+<button class="bg-surface-tint text-on-primary px-12 py-5 font-headline-md text-headline-md uppercase tracking-tighter hover:scale-105 transition-all glow-neon">
+                    MARCHA NO PROGRESSO
+                </button>
+<button class="border-2 border-secondary text-secondary px-12 py-5 font-headline-md text-headline-md uppercase tracking-tighter hover:bg-secondary/10 transition-all">
+                    VER DROPS
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile only as per Pivot rule) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full h-16 bg-[#1A1A1A]/95 backdrop-blur-2xl flex justify-around items-center border-t border-yellow-500/20 z-50">
+<a class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 transition-transform active:scale-90" href="/index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 transition-transform active:scale-90" href="/catalog.html">
+<span class="material-symbols-outlined">bolt</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Drops</span>
+</a>
+<a class="flex flex-col items-center justify-center text-lime-400 bg-white/5 border-b-2 border-lime-400 px-6 py-2 transition-transform active:scale-90" href="/about.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Mansão</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 px-6 py-2 transition-transform active:scale-90" href="/catalog.html">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Bag</span>
+</a>
+</nav>
+<!-- Medical Aesthetic Floating Elements -->
+<div class="fixed bottom-24 right-8 hidden lg:block opacity-20 pointer-events-none">
+<div class="border border-surface-tint p-4 flex flex-col gap-2">
+<div class="w-32 h-1 bg-surface-tint"></div>
+<div class="w-16 h-1 bg-surface-tint"></div>
+<span class="font-label-caps text-[10px] text-surface-tint">SYSTEM_DIAGNOSTIC: SECURE</span>
+</div>
+</div>
+    <script src="app.js"></script>
+</body></html>
