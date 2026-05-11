@@ -6,7 +6,7 @@ node_modules
 .gemini
 .cursor
 .vscode
-goro_*.png
+
 publish.js
 
 .vercel
