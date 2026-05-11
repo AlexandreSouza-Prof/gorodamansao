@@ -10,10 +10,8 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Se não estivermos no Vercel, serve os estáticos pelo Express
-if (!process.env.VERCEL) {
-    app.use(express.static(path.join(__dirname)));
-}
+// Servir arquivos estáticos pelo Express (agora que o Vercel incluirá os arquivos)
+app.use(express.static(path.join(__dirname)));
 
 // Dados em memória (Mock) para rodar no Vercel sem quebrar
 const productsMock = [
@@ -51,12 +49,10 @@ app.post('/api/orders', (req, res) => {
     res.json({ message: 'Pedido criado com sucesso', orderId });
 });
 
-// Rota principal para servir o frontend apenas fora do Vercel
-if (!process.env.VERCEL) {
-    app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, 'index.html'));
-    });
-}
+// Rota principal para servir o frontend
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 if (process.env.NODE_ENV !== 'production') {
     app.listen(PORT, () => {
