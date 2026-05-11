@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname)));
 
 // Conexão com o Banco de Dados
-const dbPath = process.env.DATABASE_URL || './database.sqlite';
+const dbPath = process.env.VERCEL ? '/tmp/database.sqlite' : (process.env.DATABASE_URL || './database.sqlite');
 const db = new sqlite3.Database(dbPath, (err) => {
     if (err) {
         console.error('Erro ao conectar ao SQLite:', err.message);
